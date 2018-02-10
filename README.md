@@ -1,8 +1,6 @@
-# docker-lamp-centos7 #
+# Dockerfile to host LAMP stack on CentOS 7 #
 
-LAMP image using CentOS-7
-
-### Dockerfile Configuration ###
+### Dockerfile includes following components ###
 
 * Apache
 * MariaDB
