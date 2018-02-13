@@ -25,8 +25,9 @@
 ### Usage ###
 
 * Pull docker LAMP image from docker hub:
-  * docker pull rdbagga/docker-lamp-centos7:php5.6
+  * docker pull rdbagga/docker-lamp-centos7
 * Create docker container using docker LAMP image:
-  * docker run -d -v /var/www/html:/var/www/html -p 0.0.0.0:80:80 -v /tmp/xdebug:/tmp/xdebug --env DOCKER_HOST_IP=<DOCKER_HOST_IP> rdbagga/docker-lamp-centos7:php5.6
+  * docker run -d -v /var/www/html:/var/www/html -p 0.0.0.0:80:80 -v /tmp/xdebug:/tmp/xdebug --env XDEBUG_REMOTE_HOST=<XDEBUG_REMOTE_HOST> rdbagga/docker-lamp-centos7
 
-Note: <DOCKER_HOST_IP> - Replace it with your IP address
+Note: <XDEBUG_REMOTE_HOST> - Replace it with docker host machine IP address
+

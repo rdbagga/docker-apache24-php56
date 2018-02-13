@@ -3,7 +3,7 @@
 # Setup xdebug
 mkdir -p /tmp/xdebug/profiler && chmod -R 664 /tmp/xdebug/profiler
 touch /tmp/xdebug/xdebug.log && chmod 664 /tmp/xdebug/xdebug.log
-sed -i  "s/{DOCKER_HOST_IP}/$DOCKER_HOST_IP/g" /root/php_xdebug.ini
+sed -i  "s/{XDEBUG_REMOTE_HOST}/$XDEBUG_REMOTE_HOST/g" /root/php_xdebug.ini
 
 # Copy config files
 cp /root/httpd.conf /etc/httpd/conf/httpd.conf
