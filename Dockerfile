@@ -8,8 +8,10 @@ RUN yum -y update && \
 
 # Install default packages
 RUN yum -y install \
+	gcc \
+	make \
 	openssl \
-	gcc make openssl-devel \
+	openssl-devel \
 	curl && \
 	yum clean all
 
@@ -18,7 +20,6 @@ RUN yum -y install \
 	libmemcached \
 	memcached \
 	httpd \
-	mariadb.x86_64 \
 	php56w \
 	php56w-common \
 	php56w-devel \
@@ -43,7 +44,7 @@ RUN pecl install mongo && \
 ENV TZ="Asia/Kolkata"
 
 # Expose port for container
-EXPOSE 80 3306 9001 27017
+EXPOSE 80 3306 27017 9001
 
 # Define volume for container
 VOLUME ["/var/www/html", "/tmp/xdebug"]
@@ -54,3 +55,4 @@ COPY include/conf.d/* /root/
 
 # Execute script in container
 CMD sh /root/setup.sh
+

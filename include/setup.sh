@@ -3,11 +3,11 @@
 # Setup xdebug
 mkdir -p /tmp/xdebug/profiler && chmod -R 664 /tmp/xdebug/profiler
 touch /tmp/xdebug/xdebug.log && chmod 664 /tmp/xdebug/xdebug.log
-sed -i  "s/{XDEBUG_REMOTE_HOST}/$XDEBUG_REMOTE_HOST/g" /root/php_xdebug.ini
+sed -i  "s/{XDEBUG_REMOTE_HOST}/$XDEBUG_REMOTE_HOST/g" /root/xdebug.ini
 
 # Copy config files
 cp /root/httpd.conf /etc/httpd/conf/httpd.conf
-cp /root/php_xdebug.ini /etc/php.d/php_xdebug.ini
+cp /root/xdebug.ini /etc/php.d/xdebug.ini
 
 # Set timezone
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
