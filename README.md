@@ -1,4 +1,4 @@
-# Dockerfile to host LAMP stack on CentOS 7 #
+# Dockerfile to host Apache 2.4 and PHP 5.6 on CentOS 7 #
 
 ### Dockerfile includes following components ###
 
