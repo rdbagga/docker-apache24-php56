@@ -2,32 +2,32 @@
 
 ### Dockerfile includes following components ###
 
-* Apache
-* MariaDB
-* PHP 5.6
-* Memcached
-* OpenSSL
+* Apache 2.4.6
+* PHP 5.6.33
+* OpenSSL 1.0.2k
+* Memcached 1.4.15
 * PHP Extensions
-  * php56-common
-  * php56-devel
-  * php56-gd
-  * php56-pdo
-  * php56-cli
-  * php56-bcmath
-  * php56-mysql
-  * php56-curl
-  * php56-mcrypt
-  * php56-pecl-memcache
-  * php56-pecl-memcached
-  * php56-pecl-xdebug
+  * php56w
+  * php56w-common
+  * php56w-devel
+  * php56w-gd
+  * php56w-pdo
+  * php56w-cli
+  * php56w-bcmath
+  * php56w-mysql
+  * php56w-curl
+  * php56w-mcrypt
+  * php56w-pecl-memcache
+  * php56w-pecl-memcached
+  * php56w-pecl-xdebug
   * mongo
 
 ### Usage ###
 
-* Pull docker LAMP image from docker hub:
-  * docker pull rdbagga/docker-lamp-centos7
-* Create docker container using docker LAMP image:
-  * docker run -d -v /var/www/html:/var/www/html -p 0.0.0.0:80:80 -v /tmp/xdebug:/tmp/xdebug --env XDEBUG_REMOTE_HOST=<XDEBUG_REMOTE_HOST> rdbagga/docker-lamp-centos7
+* Pull docker image from docker hub:
+  * docker pull rdbagga/centos7-apache24-php56
+
+* Create docker container:
+  * docker run -d -v /var/www/html:/var/www/html -p 0.0.0.0:80:80 -v /tmp/xdebug:/tmp/xdebug --env XDEBUG_REMOTE_HOST=<XDEBUG_REMOTE_HOST> rdbagga/centos7-apache24-php56
 
 Note: <XDEBUG_REMOTE_HOST> - Replace it with docker host machine IP address
-
